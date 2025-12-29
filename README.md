@@ -1,1 +1,1 @@
-Self-taught MERN Stack Developer from Bangalore (1+ years exp). Built Tata CLIQ e-commerce clone & Lumos LMS with JWT auth, Stripe payments. Deployed on Vercel/Render/AWS. DSA prep for junior roles 🚀
+my 
