@@ -4,8 +4,8 @@ Self-taught Full-Stack Developer (1+ years) building e-commerce & LMS apps with 
 
 ## 🚀 Featured Projects
 
-[! [Tata CLIQ Clone](https://img.shields.io/badge/Tata_CLIQ_Clone-MERN-black)](https://github.com/jayasingh31dec/tata-cliq-clone)
-[! [Lumos LMS](https://img.shields.io/badge/Lumos_LMS-MERN%2BStripe-blue)](https://github.com/jayasingh31dec/lumos-lms)
+[![Tata CLIQ Clone](https://img.shields.io/badge/Tata_CLIQ_Clone-MERN-black)](https://github.com/jayasingh31dec/tata-cliq-clone)
+[![Lumos LMS](https://img.shields.io/badge/Lumos_LMS-MERN%2BStripe-blue)](https://github.com/jayasingh31dec/lumos-lms)
 
 ## 🛠️ Tech Stack
 
