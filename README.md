@@ -17,7 +17,7 @@ Self-taught Full-Stack Developer (1+ years) building e-commerce & LMS apps with 
 
 ## 🔗 Let's Connect
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/jaya-singh-9504133j1)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green)](your-portfolio-link)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green)](https://jaya-mern-portfolio.vercel.app/)
 [![Resume](https://img.shields.io/badge/Resume-PDF-red)](https://github.com/jayasingh31dec/Jaya_Singh_FullStack_Developer.pdf)
 
 **Open to Junior MERN roles in Bangalore 🚀**
