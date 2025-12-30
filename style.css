@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', system-ui, sans-serif;
     background: linear-gradient(135deg, #000 0%, #0a0a0a 100%);
@@ -35,7 +39,7 @@ body {
 }
 
 #nav-menu:hover {
-    box-shadow: 0 15px 40px rgba(34,197,94,0.3);
+    box-shadow: 0 20px 50px rgba(34,197,94,0.4), 0 0 0 1px rgba(34,197,94,0.3);
     transform: translateY(-3px);
 }
 
@@ -75,24 +79,103 @@ body {
     left: 0;
 }
 
-/* Social Icons */
+/* PERFECT Social Icons - ALL 5 PLATFORMS with Official Images */
 #icons {
     position: fixed;
-    top: 25px;
-    left: 25px;
+    top: 25px;      /* Slightly higher than navbar for visual balance */
+    left: 20px;     /* PERFECTLY balanced with navbar right:20px */
     display: flex;
-    gap: 20px;
+    gap: 16px;
     z-index: 1000;
 }
 
-#icons img {
-    transition: all 0.3s ease;
-    filter: brightness(0) invert(1);
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-#icons img:hover {
-    transform: scale(1.2) rotate(10deg);
-    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(120deg);
+/* Brand colors for ALL 5 platforms */
+.github { 
+    background: linear-gradient(135deg, #24292f, #1a1e24); 
+    color: #f0f6fc; 
+}
+.linkedin { 
+    background: linear-gradient(135deg, #0077b5, #0a66c2); 
+    color: white; 
+}
+.leetcode { 
+    background: linear-gradient(135deg, #F0A500, #E68024); 
+    color: white; 
+}
+.hackerrank {
+    background: linear-gradient(135deg, #00B87C, #008867);
+    color: white;
+}
+.gfg {
+    background: linear-gradient(135deg, #2E8B57, #228B22);
+    color: white;
+}
+
+/* Icon/Image Optimization for ALL platforms */
+.leetcode img,
+.hackerrank img,
+.gfg img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain;
+}
+
+/* LeetCode specific filters */
+.leetcode img {
+    filter: brightness(0) invert(1); /* White on dark background */
+}
+.leetcode:hover img {
+    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(-20deg); /* Orange glow */
+}
+
+/* HackerRank SVG optimization */
+.hackerrank img {
+    filter: brightness(1.2) contrast(1.1);
+}
+.hackerrank:hover img {
+    filter: brightness(1.4) contrast(1.2) drop-shadow(0 0 8px rgba(0,184,124,0.6));
+}
+
+/* GFG image optimization */
+.gfg img {
+    filter: brightness(1.1) saturate(1.2);
+}
+.gfg:hover img {
+    filter: brightness(1.3) saturate(1.3) drop-shadow(0 0 8px rgba(46,139,87,0.6));
+}
+
+/* Premium hover effects */
+.social-icon:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 20px 40px rgba(34,197,94,0.3);
+    border-color: rgba(34,197,94,0.4);
+}
+
+.social-icon:hover .fab,
+.social-icon:hover .fas,
+.social-icon:hover i {
+    text-shadow: 0 0 20px currentColor;
+}
+
+.social-icon:active {
+    transform: translateY(-4px) scale(1.04);
 }
 
 /* Hero Section */
@@ -147,7 +230,7 @@ body {
     color: #22c55e;
 }
 
-/* Resume Buttons */
+/* Resume Buttons with Shimmer */
 .resume-buttons {
     display: flex;
     gap: 15px;
@@ -193,8 +276,15 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
     transition: left 0.6s;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
 }
 
 .resume-btn:hover::before, .download-btn:hover::before {
@@ -207,6 +297,8 @@ body {
     object-fit: cover;
     border-radius: 30px;
     box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
     transition: all 0.5s ease;
 }
 
@@ -712,6 +804,24 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    /* Mobile social icons - PERFECT balance */
+    #icons {
+        top: 20px;
+        left: 20px;
+        gap: 12px;
+    }
+    .social-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+    .leetcode img,
+    .hackerrank img,
+    .gfg img {
+        width: 20px !important;
+        height: 20px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -721,5 +831,21 @@ body {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    #icons {
+        left: 15px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .leetcode img,
+    .hackerrank img,
+    .gfg img {
+        width: 18px !important;
+        height: 18px !important;
     }
 }
